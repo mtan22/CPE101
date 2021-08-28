@@ -3,7 +3,6 @@
 #Section: 01
 #
 def weight_on_planets():
-   # write your code here
    weight  = int(input("What do you weigh on Earth? "))
    m = weight*0.38
    j = weight*2.34
