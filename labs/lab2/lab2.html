@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8"/>
+   <title>Lab 2, CSC 101</title>
+    <link rel="stylesheet" href="lab.css" type="text/css">
+</head>
+
+<body>
+<div class="container">
+  <div class="boxed">
+
+  <div class="header">  <h1>Lab 2, CSC 101</h1></div>
+
+<p>
+For this lab you will write a python program to compute a person's weight on other planets.
+Additionally, you will explore perhaps the single most important building
+block in programming: the function.
+The lab
+requires you to implement and test multiple functions on simple data types (e.g.,
+integers, floating points, booleans, and characters).
+</p>
+
+<p>
+Download lab2.zip and place it into your CPE101 directory.  Unzip the file and you will have the lab2 directory there with the right files in it.  Use the lab2.pdf for instructions.^S
+<!--  Download <a href="lab2.zip">lab2.zip</a>, place it in your <code>cpe101</code>
+directory (created as part of lab 1), and unzip the file.
+-->
+</p>
+
+<div class="header">
+<h2>Weight on Other Planets</h2>
+</div>
+
+<p>
+In the <code>planets</code> directory open the file named <code>planets.py</code>.  Your job is to
+add code to the weight_on_planets function to query the user for their weight on earth.  Then
+display the user's weight on Mars and Jupiter.  A sample run of the program is shown below for a user weighing 136
+pounds.  (Note: The user's input is shown in bold for clarity.  Your program should not do bold text.)
+</p>
+
+<p>
+<code>
+What do you weigh on earth? <b>136</b><br />
+<br />
+On Mars you would weigh 51.68 pounds.<br />
+On Jupiter you would weigh 318.24 pounds.<br />
+</code>
+</p>
+
+<p>
+Important Information and Requirements:<br />
+<ul>
+<li>
+   To calculate a person's weight on Mars, multiple their weight on earth by 0.38.
+</li>
+<li>
+   To calculate a person's weight on Jupiter, multiple their weight on earth by 2.34.
+</li>
+<li>
+   Your output must match my sample output exactly.  Make sure there is a blank line in between
+   prompting for the user's weight and displaying the results.
+</li>
+</ul>
+</p>
+
+<p>
+Some Restrictions to Challenge You (yes these are required for full credit):<br />
+<ul>
+<li>
+   Your program may use a "cast" only one time.  Ask me if you don't know what this means.
+</li>
+<li>
+   Your program may only use the <code>print</code> function once.
+</li>
+<li>
+   No single line of your program may exceed 80 characters.
+ </li>
+</ul>
+</p>
+
+<p>
+And Finally, Some Hints:<br />
+<ul>
+<li>
+   Use the <code>input</code> function to get your user's weight.  Be careful, however, the <code>input</code>
+   function returns a string. How can you convert that string to a number?
+</li>
+<li>
+   Including "\n" in a string will insert a newline in that spot.
+</li>
+<li>
+   You <i>do not</i> need to include additional functions.  You may write all your code in the weight_on_planets function.
+</li>
+</ul>
+</p>
+<div class="header">
+<h2>Functions</h2>
+</div>
+
+<p>
+In the <code>funcs</code> directory create a file named <code>funcs.py</code>.
+This part of the lab requires that
+you implement and test multiple functions.  You should develop these
+functions and their tests one at a time.
+The function implementations must be placed in
+<code>funcs.py</code>.  The test cases will, of course, be placed in the
+provided <code>funcs_tests.py</code>.
+</p>
+
+<p>
+You must provide at least two test cases for each of these functions.
+In addition, you should separate your testing into multiple functions
+(the file includes stubs for the first two testing functions to get you
+started).
+</p>
+
+<p>
+This part will be executed with: <b>python3 funcs_tests.py</b>
+</p>
+
+<h4 class="header">f(x) = 7x<sup>2</sup> + 2x</h4>
+
+<p>
+Write a function, named f (a poor name, really, but maps from the
+context), that corresponds to the stated mathematical definition.
+<br />
+<br />
+<br />
+</p>
+
+<h4 class="header">g(x, y) = </h4><img src="lab2_clip_image002_0001.gif" alt="eq" width="75" height="51">
+
+<p>
+Write a function, named g (again, a poor name),
+that corresponds to the stated mathematical definition.  Note that this function will attempt to divide by zero if 0 is given as the argument to x. In Python, that causes a ZeroDivisionError.  You should test that this error occurs in your unit testing by using this assert in one of your test functions: <br />
+<br />
+<code>self.assertRaises(ZeroDivisionError, funcs.g, 0, 3)</code><br />
+<br />
+(<code>ZeroDivisionError</code> is the expected error, <code>funcs.g</code> is the function to be called, 0 is the argument to x, and 3 is the argument to y.)
+<br />
+<br />
+</p>
+
+<h4 class="header">hypotenuse</h4>
+
+<p>
+Write a function, named hypotenuse, that takes two arguments corresponding
+to the lengths of the sides adjacent to the right angle of a right-triangle
+and that returns the hypotenuse of the triangle.  You will need to use the
+<code>math.sqrt</code> function from the math library, so be sure to
+<code>import math</code> at the top of your source file.
+<br />
+<br />
+</p>
+
+<h4 class="header">is_positive</h4>
+
+<p>
+Write a function, named is_positive, that takes a single number as an
+argument and that returns <code>True</code> when the argument is
+positive and <code>False</code> otherwise.  You must write this function
+using a relational operator and without using any sort of conditional (i.e.,
+<code>if</code>); the solution without a conditional is actually much simpler
+than one with.  Your test cases should use <code>assertTrue</code> and
+<code>assertFalse</code> as appropriate.
+</p>
+
+
+<div class="header">
+<h2>Demonstration</h2>
+</div>
+
+<p>
+Demonstrate your planets code and your function test cases to your instructor to have this
+lab recorded as completed.  In addition, be prepared to show your instructor
+the source code in <code>planets.py</code> and <code>funcs.py</code>.
+</p>
+
+<div class="header">
+<h2>Handin</h2>
+</div>
+
+<p>
+We are not yet going to use handin.  The demo, and possibly some unit tests will be demonstrated in Lab.
+</p>
+<p>
+  <code></code>
+</p>
+
+</ul>
+
+</div>
+</div>
+</body>
+</html>
